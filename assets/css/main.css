@@ -2080,7 +2080,7 @@ input, select, textarea {
 				left: 50%;
 				line-height: 2.25em;
 				margin: -1.25em 0 0 -3em;
-				opacity: 0;
+				opacity: 1.0;
 				padding: 0 1.5em;
 				position: absolute;
 				text-align: center;
@@ -2593,7 +2593,7 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+		background-image: url("../../images/amoc_nasa_portrait.png");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								150%;
@@ -2960,7 +2960,7 @@ input, select, textarea {
 /* Touch */
 
 	body.is-touch .image.thumb:before {
-		opacity: 0.5 !important;
+		opacity: 1.0 !important;
 	}
 
 	body.is-touch .image.thumb:after {
