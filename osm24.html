@@ -13,16 +13,14 @@
 	</head>
 	<body class="is-preload">
 
-        <!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/reyk_square.jpg" alt="" /></a>
-					<h1><strong>Reyk Börner</strong></h1>
-					PhD student<br>
-					University of Reading <br>
-					<a href="https://criticalearth.eu">CriticalEarth</a>
-				</div>
-			</header>
+    <!-- Header -->
+        <header id="header">
+            <div class="inner">
+                <a href="#" class="image avatar"><img src="images/reyk_square.jpg" alt="" /></a>
+                <h1><strong>Reyk Börner</strong></h1>
+                <a href="mailto:reyk.boerner@reading.ac.uk">reyk.boerner@reading.ac.uk</a>
+            </div>
+        </header>
 
         <div id="main">
             <section id="one">
@@ -31,11 +29,29 @@
 
                 <p>
                     <ul>
-                        <li>Link to paper</li>
-                        <li>Edge tracking algorithm: Implementation in DynamicalSystems.jl</li>
-                        <li>Model code: PlaSim-LSG and the Stommel-Lorenz84 models</li>
+                        <li><b>Link to <a href="https://doi.org/10.1016/j.physd.2023.134043">paper</a>:</b> <i>O. Mehling, R. Börner and V. Lucarini, "Limits to predictability of the asymptotic state of the Atlantic Meridional Overturning Circulation in a conceptual climate model". Physica D: Nonlinear Phenomena 134043 (2024) </i></li>
+                        <li><b>Edge tracking algorithm:</b> An implementation of the algorithm is available in the Julia software package <i>DynamicalSystems.jl</i> as part of the sub-package <i>Attractors.jl</i>. Find the documentation <a href="https://juliadynamics.github.io/DynamicalSystemsDocs.jl/attractors/stable/basins/#Attractors.edgetracking">here</a> and a coding <a href="https://juliadynamics.github.io/DynamicalSystemsDocs.jl/attractors/stable/examples/#Edge-tracking">example</a> here.</li>
+                        <li><b>Model code:</b> <br>
+                            <ul>
+                                <li><a href="https://github.com/jhardenberg/PLASIM">PlaSim-LSG</a> (Planet Simulater coupled to Large-Scale Geostrophic Ocean)</li>
+                                <li><a href="https://github.com/omehling/amoc-edgetrack">Stommel-L84</a> (Stommel 2-box model coupled to Lorenz '84 system)</li>
+                            </ul>
                     </ul>
                 </p>
+
+                <p>
+                    <div><span class="image fit"><img src="images/boerner_osm24_poster.jpg" alt="" /></span></div>
+                </p>
+
+                <p>
+                    Here's an animation of what the Melancholia states, chaotic attractors and relaxation paths of the AMOC in PlaSim-LSG look like in a projection of the first three principal components of the zonally averaged Atlantic sea temperature field:
+                </p>
+                <div class="align-center">
+                    <video width="480" height="320" controls preload="auto" loop>
+                        <source src="videos/pc3_rotate2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video> 
+                </div>
             </section>
         </div>
     </body>
