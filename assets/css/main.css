@@ -2,8 +2,11 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
 
 :root {
-	--color1: #01baa5;
+	--color1: #ff8800;
 	--color2: #ff8800;
+	--gray1: #d2d2d2;
+	--gray2: #434343;
+	--colorheadings: #fff;
   }
 
 /*
@@ -148,7 +151,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #fff;
+		background: #212121;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -163,7 +166,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #747474;
+		color: var(--gray1);
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -187,7 +190,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #747474;
+		color: var(--gray1);
 		font-weight: 800;
 	}
 
@@ -200,7 +203,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #000000;
+		color: var(--colorheadings);
 		font-weight: 400;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -255,7 +258,7 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-bottom: solid 2px #efefef;
+		border-bottom: solid 2px var(--color1);
 		margin: 2em 0;
 	}
 
@@ -2046,7 +2049,7 @@ input, select, textarea {
 
 	.box {
 		border-radius: 0.35em;
-		border: solid 2px #efefef;
+		border: solid 2px var(--color1);
 		margin-bottom: 2em;
 		padding: 1.5em;
 	}
@@ -2239,7 +2242,7 @@ input, select, textarea {
 		}
 
 			ul.alt li {
-				border-top: solid 2px #efefef;
+				border-top: solid 2px var(--gray2);
 				padding: 0.5em 0;
 			}
 
@@ -2296,7 +2299,7 @@ input, select, textarea {
 			}
 
 			ul.labeled-icons li h3 {
-				color: #b2b2b2;
+				color: inherit;
 				left: 0;
 				position: absolute;
 				text-align: center;
@@ -2658,11 +2661,11 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
-		background-image: url("../../images/ecco2_atlantic.png"), url("../../images/bg.jpg");
+		background-image: url("../../images/ecco2_2_darker.png"), url("../../images/ecco2_2_darker.png");
 		background-position: top left,							top left;
-		background-repeat: repeat,								no-repeat;
-		background-size: auto,								150%;
-		color: rgba(255, 255, 255, 0.5);
+		background-repeat: no-repeat,								no-repeat;
+		background-size: 160%,								100%;
+		color: #fff;
 		height: 100%;
 		left: 0;
 		padding: 8em 4em;
@@ -2697,7 +2700,7 @@ input, select, textarea {
 		}
 
 		#header h1 {
-			color: rgba(255, 255, 255, 0.5);
+			color: #fff;
 			font-size: 1.8em;
 			line-height: 1.75em;
 			margin: 0;
@@ -2715,11 +2718,11 @@ input, select, textarea {
 	}
 
 		#footer .icons a {
-			color: rgba(255, 255, 255, 0.4);
+			color: var(--gray1);
 		}
 
 	#footer .copyright {
-		color: rgba(255, 255, 255, 0.4);
+		color: var(--gray1);
 		font-size: 0.8em;
 		list-style: none;
 		margin: 1em 0 0 0;
@@ -2754,7 +2757,7 @@ input, select, textarea {
 	}
 
 		#main > section {
-			border-top: solid 2px #efefef;
+			border-top: solid 2px var(--gray2);
 			margin: 4em 0 0 0;
 			padding: 4em 0 0 0;
 		}
@@ -3143,7 +3146,7 @@ input, select, textarea {
 			#footer {
 				background-attachment: scroll;
 				background-color: #1f1815;
-				background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+				background-image: url("../../images/ecco2_2_darker.png"), url("../../images/bg.jpg");
 				background-position: top left,						bottom center;
 				background-repeat: repeat,							no-repeat;
 				background-size: auto,							cover;
