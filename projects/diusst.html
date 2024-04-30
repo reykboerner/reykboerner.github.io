@@ -6,7 +6,7 @@
 -->
 <html lang="en">
 	<head>
-		<title>Projects | Ocean Melancholia</title>
+		<title>Projects | Diurnal SST</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="author" content="Reyk Börner" />
@@ -27,41 +27,31 @@
         <div id="main">
             <section id="one">
                 <header id="major">
-                    <h1>Ocean Melancholia</h1>
-                    <h3>What separates today's ocean currents from a collapsed state?</h3>
+                    <h1>Modeling diurnal warm layers</h1>
+                    <h3>A more realistic sea surface for cloud modeling</h3>
                 </header>
-            
-            <p>The goal of this project is to better understand the stability of the global ocean currents by investigating the edge state or <em>Melancholia state</em> of the Atlantic Meridional Overturning Circulation (AMOC) that separates a strong stable ocean flow from a much weaker stable circulation state.</p>
 
-            <h4>What is the AMOC?</h4>
-            
-            <p>The AMOC is a large-scale ocean current in the Atlantic that transports huge amounts of heat northwards, contributing to the mild climate in northern Europe. Like other parts of the Earth system (such as ice sheets or rainforests), the AMOC is believed to be multistable: it can exist in more than one stable state for the same external conditions. This implies a risk of 'tipping' from today's stable flow state to a much weaker stable current as a result of fluctuations or long-term changes in the climate. In turn, a collapse of the AMOC would cause severe climate impacts around the globe.</p>
+            <p>The sea surface of the tropical ocean typically warms under the sun during daytime and cools at night. This daily temperature cycle depends on the amount of sunlight, wind speed, and other factors such as air temperature, humidity, and water clarity. Model simulations of the tropical atmosphere demonstrate that the daily change of sea surface temperature (SST) can affect if and how clouds cluster above the ocean. However, many studies investigating cloud organization neglect this atmosphere-ocean interaction or represent it unrealistically. To address this, we present a simple numerical model that adds one step of realism by including the effect of water mixing in the upper ocean caused by wind. Comparing predictions of this model with the observed sea temperature evolution during a research cruise, we show that the model reproduces the observed SST dynamics, accurately capturing the relationship between wind speed and the strength of daily SST warming. Our model can be plugged into high-resolution atmosphere models to improve the representation of air-sea heat exchange when simulating clouds. Understanding the complex processes behind cloud clustering is important for the prediction of rainfall extremes, hurricanes, and global warming estimates.</p>
 
-            <p>Rather than focusing on the assumed stable states, we ask what lies in between. What separates conditions that will sustain a strong AMOC from those that will lead to a collapsed AMOC?</p>
+                <p>
+                <div class="row">
+                    <div class="col-6 col-12-xsmall">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/KdOWF_fzRLE?si=FVQEO6rs-EYfkKi8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-            <h4>What is a Melancholia state?</h4>
-            <p>The theory of multistable dynamical systems tells us that <em>edge states</em>, or <em>Melancholia states</em>, often act as gateways for transitions from one to another stable state. Although these states are unstable, the system can remain near them for an extended transient period. Knowing the properties of Melancholia states could thus help understand the mechanisms of transitions and provide a means of detecting transition events.</p>
-
-            <h4>How do we compute it?</h4>
-
-
-           
-
-            
-
-            <p>
-                <div class="box alt">
-                    <div class="row gtr-50 gtr-uniform">
-                        <div class="col-12"><span class="image fit"><img src="../images/bistable-amoc_scheme.png" alt="" /></span></div>
+                    </div>
                 </div>
-    
             </p>
-            <p>In this project, we compute and investigate the Melancholia state of the AMOC in climate models of different sophistication, from conceptual climate models to an intermediate-complexity earth system model.</p>
-            
-            
+                
             <h3>Related publications</h3>
 
+            <ul>
+            <li>Preprint: Börner, Haerter & Fiévet (2024), "A conceptual model of the diurnal warm layer for idealized atmospheric simulations with interactive SST". <a href="https://arxiv.org/abs/2205.07933">arXiv:2205.07933</a></li>
+        </ul>
+
+
             <h3>Further resources</h3>
+
+            The source code of the diurnal warming models are available on <a href="github.com/reykboerner/diusst">Github</a>.
 
 
 
