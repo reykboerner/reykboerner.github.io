@@ -216,7 +216,7 @@ input, select, textarea {
 
 	h1 {
 		font-size: 2em;
-		line-height: 0em;
+		line-height: 2em;
 	}
 
 	h2 {
@@ -2703,7 +2703,6 @@ input, select, textarea {
 			color: #fff;
 			font-size: 1.8em;
 			line-height: 1.75em;
-			margin: 0;
 		}
 
 		#header .image.avatar {
@@ -3073,9 +3072,11 @@ input, select, textarea {
 					font-size: 1.25em;
 				}
 
+				/*
 					#header h1 br {
 						display: none;
 					}
+				*/
 
 				#header > .inner {
 					margin-bottom: 0;
@@ -3137,9 +3138,11 @@ input, select, textarea {
 					font-size: 1.75em;
 				}
 
+					/*
 					#header h1 br {
 						display: inline;
 					}
+					*/
 
 		/* Footer */
 
@@ -3272,9 +3275,11 @@ input, select, textarea {
 				padding: 4.5em 1.5em;
 			}
 
+			/*
 				#header h1 br {
 					display: none;
 				}
+			*/
 
 		/* Footer */
 
