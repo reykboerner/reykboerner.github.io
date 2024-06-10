@@ -2661,7 +2661,7 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
-		background-image: url("../../images/ecco2_2_darker.png"), url("../../images/ecco2_2_darker.png");
+		background-image: url("../../images/ecco2_2_darker.jpg"), url("../../images/ecco2_2_darker.jpg");
 		background-position: top left,							top left;
 		background-repeat: no-repeat,								no-repeat;
 		background-size: 160%,								100%;
@@ -3149,7 +3149,7 @@ input, select, textarea {
 			#footer {
 				background-attachment: scroll;
 				background-color: #1f1815;
-				background-image: url("../../images/ecco2_2_darker.png"), url("../../images/bg.jpg");
+				background-image: url("../../images/ecco2_2_darker.jpg"), url("../../images/bg.jpg");
 				background-position: top left,						bottom center;
 				background-repeat: repeat,							no-repeat;
 				background-size: auto,							cover;
