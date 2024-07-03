@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Abstracts | Metastability and Tipping in Complex Systems</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/metastability.css" />
+	</head>
+	<body class="is-preload">
+        <script type="text/javascript">
+            (function(window, document, dataLayerName, id) {
+            window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+            function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString();f="; SameSite=Strict"}document.cookie=a+"="+b+d+f+"; path=/"}
+            var isStgDebug=(window.location.href.match("stg_debug")||document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
+            var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName),isStgDebug&&qP.push("stg_debug");var qPString=qP.length>0?("?"+qP.join("&")):"";
+            tags.async=!0,tags.src="https://reykboerner.containers.piwik.pro/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
+            !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+            })(window, document, 'dataLayer', 'f2c0fb08-de74-4f93-a398-109ca21ae49f');
+        </script>
+
+
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+            <a href="#" class="image avatar"><img src="../images/metastability24/mtcs24_logo1.png" alt="" /></a>
+            <p>3-5 September 2024 <br>
+            <a href="https://le.ac.uk/computing-and-mathematical-sciences">University of Leicester</a><br>
+            Leicester, UK
+          </p>
+        </div>
+    </header>
+
+        <div id="main">
+            <section id="one">
+                
+                
+            <h1>Conference abstracts</h1>
+            <h2>Keynote talks</h2>
+            <h3>Maria Cameron</h3>
+            <h4>Theory and Computation of the Quasipotential</h4>
+            <p>
+                Many processes in nature e.g. genetic switches, ecological systems, and nonlinear oscillators with periodic forcing can be modeled using stochastic differential equations (SDEs) with small noise. For gradient SDEs, the invariant probability measure and the most probable escape paths from the attractors can be expressed in terms of their potential functions. For nongradient SDEs, the counterpart of the potential function is the quasipotential, a key function in the large deviations theory (Freidlin and Wentzell, 1970s — 2010s). The quasipotential is a function defined on the phase space as the solution to a certain optimal control problem. It allows us to obtain asymptotic estimates for the invariant measure in the small noise limit, find the most probable escape paths, and facilitate the visualization of the stochastic dynamics. I will give an overview of the theory of the quasipotential and discuss two approaches to computing it in whole regions of the phase space. The first approach is based on a greedy algorithm for solving a certain optimal control problem on the mesh in the phase space. The second approach directly computes the Lagrangian manifold in the lifted space and then projects the quasipotential level sets to the phase space.
+            </p>
+
+            <h3>Bartłomiej Dybiec</h3>
+            <h4>Metastability and Jump Processes</h4>
+            <p>
+                A particle immersed in a liquid constantly interacts with other particles. Due to the enormous number of collisions, these interactions cannot be described exactly. An effective approximate description is provided by noise. Noise is a stochastic process that is used to describe complicated or not fully known interactions. According to central limit theorems, the sum of many independent identically distributed random variables tends to the Gaussian distribution (if components are characterized by finite variance) or to the α-stable density (diverging variance of components). Consequently, the Lévy noise and its special case—the Gaussian white noise (GWN)—are frequently used in the description of noise driven systems in the out-of-equilibrium and equilibrium regimes, respectively. Both of them share numerous similarities, however they significantly and inherently differs. α-stable noises (with α < 2) inevitably lead to occurence of long jumps. Increasing number of observations demonstrates a plethora of situations in which non-Gaussian heavy tailed fluctuations are recorded. This indicates the need to include heavy-tailed fluctuations in the description of dynamical systems especially in out-of-equilibrium realms. The possibility of anomalously long jumps, drastically changes the properties of stochastic dynamical systems compared to their Gaussian noise driven counterparts. It is the long jumps that lead to bimodal non-equilibrium stationary states in single-well, super-harmonic, potential wells. Exploration of different scenarios for restricting or eliminating long jumps, allows for a better understanding of how long jumps determine the properties of stationary states and how they affect their modality. This provides a deeper understanding of the role of non-Gaussian long jumps and the mechanisms responsible for emergence of multimodal stationary states.
+            </p>
+            <ul>
+                <li>[1] P. Pogorzelec and B. Dybiec, Resetting induced multimodality, Chaos 33, 063105 (2023)</li>
+                <li>[2] P. Pogorzelec and B. Dybiec, Role of long jumps in Lévy noise-induced multimodality, Chaos 34, 063136 (2024)</li>
+            </ul>
+
+            <h3>Steve Fitzgerald</h3>
+            <h4>Path Integrals and Stochastic Transitions</h4>
+            <p>
+                Traditionally, stochastic processes are modelled using either a Fokker-Planck PDE approach, or a Langevin SDE approach. There is also a third way: the functional or path integral. Originally developed by Wiener in the 1920s to model Brownian motion, path integrals were famously applied to quantum mechanics by Feynman in the 1950s. However, they also offer much to classical stochastic processes. In this talk I will introduce the formalism, focussing on the dominant contribution to the path integral when the noise is weak. There exists a remarkable correspondence between the most-probable stochastic paths and Hamiltonian mechanics in an effective potential [1,2,3]. I will then discuss applications, including reaction pathways conditioned on finite time [2]. We demonstrate that the most probable pathway may be very different from the usual minimum energy path used to calculate the average reaction rate. If time permits, I will also discuss the extremely nonlinear crystal dislocation response to applied stress [4].
+            </p>
+            <ul>
+                <li>[1] Ge, Hao, and Hong Qian. Int. J. Mod. Phys. B 26.24 1230012 (2012)</li>
+                <li>[2] Fitzgerald, Steve, et al. J. Chem. Phys. 158.12 (2023)</li>
+                <li>[3] Honour, Tom and Fitzgerald, Steve. J. Phys. A 57 175002 (2024)</li>
+                <li>[4] Fitzgerald, Steve. Sci. Rep. 6 (1) 39708 (2016)</li>
+            </ul>
+
+            <h3>Kathrin Padberg-Gehle</h3>
+            <h4>Metastability and almost-invariant sets</h4>
+
+            <p>Metastability and almost-invariant sets are key concepts in the study of dynamical systems as they determine the long-term behavior of complex systems. An almost-invariant set is a subset of state space are characterized by the property that trajectories starting in it have a high probability of remaining in the set over a significant time duration. We will discuss numerical methods for the identification and characterization of almost-invariant sets and also address data-based and nonautonomous extensions. All approaches are demonstrated in a number of example systems, including turbulent Rayleigh-Bénard convection.</p>
+
+            <h3>Ying-Cheng Lai</h3>
+            <h4>Global phase-space approach to rate-induced tipping in complex biological networks</h4>
+
+            <p>In ecosystems, environmental changes as a result of natural and human processes can cause some key parameters to change with time. Depending on how fast such a parameter changes, a tipping event can occur. Existing works on rate-induced tipping, or R-tipping, provided mathematical insights into this phenomenon in low-dimensional systems from a local dynamical point of view, revealing, e.g., the existence of a critical rate for some specific initial condition above which tipping will occur. Motivated by the observation that ecosystems are dynamic, most likely transient, and constantly driven away from some equilibrium state, we develop a global phase-space approach to R-tipping. In particular, we introduce the notion of the probability of R-tipping defined for initial conditions in the phase space. Using real-world, complex high-dimensional mutualistic networks as a paradigm, we discover a scaling law between this probability and the rate of parameter change, and provide a geometric theory to explain the scaling. Our analysis elucidates the meaning of the critical rate and its dependence on initial conditions. The phase-space approach offers a comprehensive physical framework to understand R-tipping.
+            </p>
+            <p>
+                This is a joint work with Dr. Shirin Panahi from Arizona State University, Prof. Younghae Do from Kyungpook National University in South Korea, and Prof. Alan Hastings from UC Davis.
+            </p>
+            <ul>
+                <li>[1]	S. Panahi, Y.-H. Do, A. Hastings, and Y.-C. Lai, “Rate-induced tipping in high-dimensional complex ecological networks,” PNAS 120, e2308820120, 1-9 (December 2023)</li>
+                <li>[2] J.-J. Jiang, Z.-G. Huang, T. P. Seager, W. Lin, C. Grebogi, A. Hastings, and Y.-C. Lai, “Predicting tip-ping points in mutualistic networks through dimension reduction,” PNAS 115, E639-E647 (2018)</li>
+                <li>[3] J.-J. Jiang, A. Hastings, and Y.-C. Lai, “Harnessing tipping points in complex ecological networks,” Journal of the Royal Society Interface 16, 20190345 (2019)</li>
+            </ul>
+
+            <h3>Grigorios A. Pavliotis</h3>
+            <h4>Phase Transitions and Dynamical Metastability for Stochastic Interacting Particle Systems</h4>
+
+            <p>We consider systems of weakly interacting diffusions on the torus. In the mean field limit, the dynamics is described by the McKean-Vlasov PDE. We show that for interaction potentials that are not H-stable, we have non-uniqueness of stationary states, e.g. phase transitions at low temperatures. Furthermore, we show that for sufficiently short-range attractive interaction potentials, the phase transition is discontinuous. We then show that stochastic interacting particle systems that exhibit discontinuous phase transitions exhibit dynamical metastability and clustering. We finally show that the dynamics of the emergent clusters can be described using a system of coalescing Brownian motions.</p>
+
+            <h3>Larissa Serdukova</h3>
+            <h4>Lévy-noise versus Gaussian-noise-induced Transitions in the Ghil-Sellers Energy Balance Model</h4>
+
+            <p>We study the impact of applying stochastic forcing to the Ghil–Sellers energy balance climate model in the form of a fluctuating solar irradiance. Through numerical simulations, we explore the noise-induced transitions between the competing warm and snowball climate states. We consider multiplicative stochastic forcing driven by Gaussian and α stable Lévy – α ∈ (0,2) – noise laws, examine the statistics of transition times, and estimate the most probable transition paths. While the Gaussian noise case – used here as a reference – has been carefully studied in a plethora of investigations on metastable systems, much less is known about the Lévy case, both in terms of mathematical theory and heuristics, especially in the case of high- and infinite-dimensional systems. In the weak noise limit, the expected residence time in each metastable state scales in a fundamentally different way in the Gaussian vs. Lévy noise case with respect to the intensity of the noise. In the former case, the classical Kramers-like exponential law is recovered. In the latter case, power laws are found, with the exponent equal to −α, in ap parent agreement with rigorous results obtained for additive noise in a related – yet different – reaction–diffusion equation and in simpler models. This can be better understood by treating the Lévy noise as a compound Poisson process. The transition paths are studied in a projection of the state space, and remarkable differences are observed between the two different types of noise. The snowball-to-warm and the warm-to-snowball most probable transition paths cross at the single unstable edge state on the basin boundary. In the case of Lévy noise, the most probable transition paths in the two directions are wholly separated, as transitions apparently take place via the closest basin boundary region to the outgoing attractor. This property can be better elucidated by considering singular perturbations to the solar irradiance.</p>
+
+            <ul class="actions stacked">
+                <li><a href="../metastability24.html" class="button small">Back to homepage</a></li>
+            </ul>
+                
+            </section>
+        </div>
+
+    <!-- Footer -->
+        <footer id="footer">
+            <div>
+                <p>
+                    <a href="../metastability24.html#dates">Important dates</a><br>
+                    <a href="../metastability24.html#speakers">Speakers</a><br>
+                  <a href="../metastability24.html#theme">Theme</a> <br>
+                  <a href="../metastability24.html#programme">Programme</a><br>
+                  <a href="../metastability24.html#submission">Abstract submission</a><br>
+                  <a href="../metastability24.html#registration">Registration</a><br>
+                  <a href="../metastability24.html#registration">Support</a><br>
+                  <a href="../metastability24.html#venue">Venue</a><br>
+                  <a href="mailto:reyk.boerner@reading.ac.uk?subject=Metastability and Tipping Conference 2024">Contact</a>
+                </p>
+            </div>
+            <div class="inner">
+                 <ul class="copyright">
+                    <li>&copy; The orangising committee 2024. <br>
+                        Design based on <a href="http://html5up.net">HTML5 UP</a>. <br>Background image: Greg Shira, NASA Visualization Studios</li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+
+    <!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.poptrox.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+</html>
