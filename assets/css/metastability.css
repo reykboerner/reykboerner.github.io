@@ -2664,10 +2664,10 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: var(--color1);
+		background-color: var(--gray2);
 		background-image: url("../../images/ecco2_2_darker.jpg"), url("../../images/ecco2_2_darker.jpg"); 
 		background-position: top left,							top left;
-		background-repeat: no-repeat,								no-repeat;
+		background-repeat: repeat,								no-repeat;
 		background-size: 140%,								100%;
 		color: #fff;
 		height: 100%;
