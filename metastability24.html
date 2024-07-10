@@ -50,7 +50,7 @@
               
               <p>
                 <ul class="actions stacked">
-                  <li><a href="#registration" class="button primary small">Register as early bird by 9th July</a></li>
+                  <li><a href="#registration" class="button primary small">Register by 31 July</a></li>
               </ul>
               </p>
               <p id="demo"></p>
@@ -181,11 +181,11 @@
                 <h3>Important dates</h3>
                 <p>
                   <ul>
-                    <li>Abstract submission deadline: <b>2 July (passed)</b></li>
+                    <li>Abstract submission deadline: <b>2 July</b> (passed)</li>
                     <li>Notification of acceptance: <b>Sent on 5 July</b></li>
-                    <li>Early-bird registration deadline: <b>9 July</b></li>
+                    <li>Early-bird registration deadline: <b>9 July</b> (passed)</li>
                     <li>Registration closes: <b>31 July</b></li>
-                    <li>Conference dates: 3-5 September</li>
+                    <li>Conference dates: <b>3-5 September</b></li>
                   </ul>
                 </p>
               </section>
@@ -207,14 +207,14 @@
      
               <section id="registration">
                 <h3>Registration</h3>
-                <p>Register <b>before 9 July</b> to secure the early-bird rate! Registration is open until <b>31 July</b>.</p>
+                <p>Registration is open until <b>31 July</b>.</p>
                 <ul class="actions stacked">
                     <li><a href="https://shop.le.ac.uk/conferences-and-events/leicester-conferences/mathematics/metastability-tipping-2024" class="button primary small">Register here</a></li>
                 </ul>
                 <p>The registration fee includes full attendance (Tuesday to Thursday), coffee breaks, and the poster reception on Tuesday evening. Attendees are invited to join the self-funded dinner on Wednesday evening.
                   <ul>
                     <li>Student fee: £70</li>
-                    <li>Early-bird regular fee: £100</li>
+                    <li>Early-bird regular fee (until 9 July): £100</li>
                     <li>Regular fee: £150</li>
                   </ul>
                 </p>
@@ -307,7 +307,7 @@
 
       <script>
       // Set the date we're counting down to
-      var countDownDate = new Date("Jul 09, 2024 23:59:59").getTime();
+      var countDownDate = new Date("Sep 03, 2024 11:00:00").getTime();
 
       // Update the count down every 1 second
       var x = setInterval(function() {
@@ -325,8 +325,8 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Display the result in the element with id="demo"
-        document.getElementById("demo").innerHTML = days + " days, " + hours + " hours, "
-        + minutes + " minutes and " + seconds + " seconds left for early-bird registration.";
+        document.getElementById("demo").innerHTML = "See you in " + days + " days!"
+        // " + hours + " hours, " + minutes + " minutes and " + seconds + " seconds left for early-bird registration.";
 
         // If the count down is finished, write some text
         if (distance < 0) {
