@@ -274,13 +274,12 @@ input, select, textarea {
 	}
 
 	code {
-		background: #f7f7f7;
-		border-radius: 0.35em;
-		border: solid 2px #efefef;
+		border-radius: 0.0em;
+		border: solid 0px #efefef;
 		font-family: "Courier New", monospace;
-		font-size: 0.9em;
-		margin: 0 0.25em;
-		padding: 0.25em 0.65em;
+		font-size: 0.8em;
+		margin: 0.0em 0.0em;
+		padding: 0.0em 0.0em;
 	}
 
 	pre {
