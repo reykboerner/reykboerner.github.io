@@ -3330,7 +3330,8 @@ input, select, textarea {
 			[time-1620] 0.5fr
 			[time-1640] 0.5fr
 			[time-1700] 0.5fr
-			[time-1720] 0.5fr;
+			[time-1720] 0.5fr
+			[time-1900] 0.5fr;
 			/* Note 1:
 			Use 24hr time for gridline names for simplicity
 
@@ -3404,7 +3405,11 @@ body {
 	display: block;
 }
 
-.session-title,
+.session-title {
+	margin: 0;
+	fontsize: 1.1em;
+}
+
 .time-slot {
 	margin: 0;
 	font-size: 1em;
@@ -3412,10 +3417,11 @@ body {
 
 .session-title a {
 	color: #fff;
-	text-decoration-style: dotted;
+	text-decoration-line: underline;
 	
 	&:hover {
 		font-style: italic;
+		color: #fff;
 	}
 	
 	&:focus {
@@ -3430,17 +3436,17 @@ body {
 }
 
 .track-1 {
-	background-color: var(--color1);
+	background-color: #1c758b;
 	color: #fff;
 }
 
 .track-2 {
-	background-color: #008949;
+	background-color: #10673e;
 	color: #fff;
 }
 
 .track-3 {
-	background-color: #007292;
+	background-color: var(--color1);
 	color: #fff;
 }
 
@@ -3450,11 +3456,8 @@ body {
 }
 
 .track-all {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: #ccc;
-	color: #000;
+	background: #666666;
+	color: #fff;
 	box-shadow: none;
 }
 
