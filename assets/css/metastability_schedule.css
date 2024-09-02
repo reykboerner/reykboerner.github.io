@@ -3308,18 +3308,29 @@ input, select, textarea {
 		grid-gap: 1em;
 		grid-template-rows:
 			[tracks] auto
-			[time-0900] 1fr
-			[time-0940] 1fr
-			[time-1020] 1fr
-			[time-1100] 1fr
-			[time-1140] 1fr
-			[time-1220] 1fr
-			[time-1400] 1fr
-			[time-1440] 1fr
-			[time-1520] 1fr
-			[time-1600] 1fr
-			[time-1640] 1fr
-			[time-1720] 1fr;
+			[time-0900] 0.5fr
+			[time-0920] 0.5fr
+			[time-0940] 0.5fr
+			[time-1000] 0.5fr
+			[time-1020] 0.5fr
+			[time-1040] 0.5fr
+			[time-1100] 0.5fr
+			[time-1120] 0.5fr
+			[time-1140] 0.5fr
+			[time-1200] 0.5fr
+			[time-1220] 0.5fr
+			[time-1240] 0.5fr
+			[time-1400] 0.5fr
+			[time-1420] 0.5fr
+			[time-1440] 0.5fr
+			[time-1500] 0.5fr
+			[time-1520] 0.5fr
+			[time-1540] 0.5fr
+			[time-1600] 0.5fr
+			[time-1620] 0.5fr
+			[time-1640] 0.5fr
+			[time-1700] 0.5fr
+			[time-1720] 0.5fr;
 			/* Note 1:
 			Use 24hr time for gridline names for simplicity
 
@@ -3419,17 +3430,17 @@ body {
 }
 
 .track-1 {
-	background-color: #1259B2;
+	background-color: var(--color1);
 	color: #fff;
 }
 
 .track-2 {
-	background-color: #687f00;
+	background-color: #008949;
 	color: #fff;
 }
 
 .track-3 {
-	background-color: #544D69;
+	background-color: #007292;
 	color: #fff;
 }
 
