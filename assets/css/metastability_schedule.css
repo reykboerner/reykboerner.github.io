@@ -3331,7 +3331,8 @@ input, select, textarea {
 			[time-1640] 0.5fr
 			[time-1700] 0.5fr
 			[time-1720] 0.5fr
-			[time-1900] 0.5fr;
+			[time-1900] 0.5fr
+			[time-2000] 0.5fr;
 			/* Note 1:
 			Use 24hr time for gridline names for simplicity
 
