@@ -121,7 +121,7 @@ input, select, textarea {
 	display: flex;
 	width: 100%;
 	gap: 12px;
-	align-items: center;
+	align-items: flex-start;
 	scroll-snap-type: x mandatory;
 	flex-flow: row nowrap;
 	scroll-behavior: smooth;
@@ -145,8 +145,8 @@ input, select, textarea {
   }
   
   .carousel-slide {
-	flex: 1 0 30%;
-	aspect-ratio: 1.6;
+	flex: 1 0 16em;
+	aspect-ratio: 1.5;
 	border-radius: 5px;
 	flex-flow: column nowrap;
 	position: relative;
@@ -203,7 +203,7 @@ input, select, textarea {
   
   @media (max-width: 600px) {
 	.carousel-slide {
-	  flex: 1 0 90%;
+	  flex: 1 0 16em;
 	}
   }
   
