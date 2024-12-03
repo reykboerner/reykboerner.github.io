@@ -190,7 +190,6 @@ input, select, textarea {
 	width: 100%;
   	overflow: hidden; /* Ensure anything outside the aspect ratio is hidden */
 	object-fit: cover; /* Crop image if necessary */
-	object-position: center;
 	border-radius: 5px; /* Optional rounded corners */
   }
 
