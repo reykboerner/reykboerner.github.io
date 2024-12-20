@@ -145,79 +145,92 @@ input, select, textarea {
   }
   
   .carousel-slide {
+	position: relative; /* For absolute positioning of elements if needed */
 	display: grid;
-  	grid-template-rows: auto auto auto auto 1fr; /* Image, header, and text */
+	grid-template-rows: auto auto auto 1fr auto; /* Define rows for elements */
+	grid-template-columns: 1fr auto; /* Define columns for h3 and date */
+	grid-auto-rows: min-content;
 	gap: 10px; /* Space between elements */
 	flex: 1 0 16em;
 	aspect-ratio: 0.7;
 	border-radius: 5px;
-	position: relative;
-	display: grid;
-	justify-content: flex-start;
-	align-items: left;
 	background-color: var(--gray2);
 	scroll-snap-align: center;
 	padding: 16px;
 	cursor: pointer; /* Gives a clickable appearance */
-	transition: transform 0.2s ease, box-shadow 0.2s ease; /* Optional hover effects */
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
   .carousel-slide:hover {
 	transform: scale(1.02); /* Slightly enlarges the box on hover */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
   }
-
+  
   .carousel-link {
-	display: block;
-	text-decoration: none; /* Remove underline from the text */
-    color: inherit; /* Inherit text color from carousel-slide */
+	position: absolute; /* Covers the entire slide for clickability */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2; /* Ensure it sits below visible content */
+	text-decoration: none;
+	color: inherit;
   }
-
+  
   .carousel-date {
 	grid-row: 1;
-    position: absolute;
-    top: 5px; /* Adjusts distance from the top */
-    right: 15px; /* Adjusts distance from the right */
-    padding: 0px 0px;
-    font-size: 0.8em;
+	grid-column: 2; /* Align to the right */
+	justify-self: end;
+	align-self: center;
+	font-size: 0.8em;
 	color: #787878;
-	z-index: 3; /* Above other content */
   }
-
-  .carousel-image img {
-	grid-row: 3;
-	aspect-ratio: 16 / 9; /* For example, 16:9 aspect ratio */
+  
+  h3.carousel-heading {
+	grid-row: 1;
+	grid-column: 1; /* Align to the left */
+	justify-self: start;
+	align-self: center;
+	font-size: 1em;
+	margin: 0;
+	color: #ffffff;
+  }
+  
+  .carousel-image {
+	grid-row: 2 / 3;
+	grid-column: 1 / -1; /* Span full width */
+	overflow: hidden;
+	aspect-ratio: 16 / 9;
 	width: 100%;
-  	overflow: hidden; /* Ensure anything outside the aspect ratio is hidden */
-	object-fit: cover; /* Crop image if necessary */
-	border-radius: 5px; /* Optional rounded corners */
   }
-
-/* Style for the heading inside the carousel slide */
-.carousel-slide h2.carousel-heading {
-	grid-row: 4;
-    color: var(--color1);  /* Set heading color */
-    text-align: left;             /* Align text left */
-    font-size: 1.2em;
+  
+  .carousel-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+  }
+  
+  h2.carousel-heading {
+	grid-row: 3;
+	grid-column: 1 / -1; /* Span full width */
+	color: var(--color1);
+	text-align: left;
+	font-size: 1.2em;
 	line-height: 1.2;
 	margin: 6px 0px;
-}
-
-.carousel-slide h3.carousel-heading {
-	grid-row: 2;
-    text-align: left;             /* Align text left */
-    font-size: 1em;
-	font-weight: bold;
-	margin: 0;
-}
-
-/* Style for the paragraph text inside the carousel slide */
-.carousel-slide p.carousel-text {
-	grid-row: 5;
-    font-size: 1em;
-    line-height: 1.2;
+	align-self: start;
+  }
+  
+  p.carousel-text {
+	grid-row: 4;
+	grid-column: 1 / -1; /* Span full width */
+	font-size: 1em;
+	line-height: 1.2;
 	margin: 6px 0;
-}
+	text-align: left;
+	align-self: start;
+  }  
 
   @media (max-width: 600px) {
 	.carousel-slide {
