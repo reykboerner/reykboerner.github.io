@@ -3249,6 +3249,7 @@ input, select, textarea {
 			#footer {
 				width: 30%;
 				padding: 20% 3em 3em 3em;
+				position: fixed
 			}
 
 			#footer .copyright li {
