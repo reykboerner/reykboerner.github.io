@@ -2816,7 +2816,7 @@ input, select, textarea {
 		background-attachment: scroll,								scroll;
 		background-image: url("../../images/ecco2_2_darker.jpg"), url("../../images/ecco2_2_darker.jpg");
 		background-position: top left,							top left;
-		background-repeat: no-repeat,								no-repeat;
+		background-repeat: repeat,								no-repeat;
 		background-size: 160%,								100%;
 		color: #fff;
 		height: 100%;
@@ -2864,6 +2864,16 @@ input, select, textarea {
 		}
 
 /* Footer */
+
+	#footer {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		background-size: auto, cover;
+		text-align: right;
+		padding: 20% 4em 2em 2em;
+		width: 25%;		
+	}
 
 	#footer .icons {
 		margin: 1em 0 0 0;
@@ -3236,6 +3246,10 @@ input, select, textarea {
 				}
 
 		/* Footer */
+			#footer {
+				width: 30%;
+				padding: 20% 3em 3em 3em;
+			}
 
 			#footer .copyright li {
 				border-left-width: 0;
