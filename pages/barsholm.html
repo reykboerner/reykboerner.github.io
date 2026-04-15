@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html lang="en">
 	<head>
 		<title>Barsholm</title>
@@ -11,16 +10,126 @@
     <script data-goatcounter="https://parabuthus.goatcounter.com/count"
         	async src="//gc.zgo.at/count.js"></script>
 
-    <h1>Wo ist die <em>Barsholm</em> gerade?</h1>
-    <!-- MarineTraffic embed example -->
+            <section>
+                <h1>Wo ist die <em>Barsholm</em> gerade?</h1>
     
-    <iframe
-        src="https://www.vesselfinder.com/widgetb?mmsi=211216460&width=100%25&height=500&names=1&speed=1&course=1&eta=0&animate=1"
-        width="100%"
-        height="500"
-        frameborder="0">
-    </iframe>
+                <!-- AIS Vessel Tracker -->
+<!-- Dependencies -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Map container -->
+<div class="map-wrap">
+  <div id="vessel-map"></div>
+  <div id="vessel-status">Connecting to AIS stream...</div>
+</div>
+
+<style>
+  .map-wrap {
+    position: relative;
+    width: 100%;
+    height: 500px; /* adjust to taste */
+  }
+  #vessel-map {
+    width: 100%;
+    height: 100%;
+  }
+  #vessel-status {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    z-index: 1000;
+    pointer-events: none;
+  }
+</style>
+
+<script>
+  const MMSI       = "211216460";   // ← replace
+  const APIKEY     = "1d8d8098164f4cf65e6e4782c6e61edb805f9068"; // ← replace (free at aisstream.io)
+  const VESSEL_NAME = "Barsholm"; // ← replace
+
+  // --- Map setup (centred on Baltic/North Sea by default) ---
+  const map = L.map('vessel-map').setView([56.0, 14.0], 6);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+  // Boat icon
+  const boatIcon = L.divIcon({
+    html: '⛵',
+    className: '',
+    iconSize: [24, 24],
+    iconAnchor: [12, 12]
+  });
+
+  let marker = null;
+  let statusEl = document.getElementById('vessel-status');
+
+  function connect() {
+    const ws = new WebSocket("wss://stream.aisstream.io/v0/stream");
+
+    ws.onopen = () => {
+      ws.send(JSON.stringify({
+        APIKey: APIKEY,
+        BoundingBoxes: [[[-90, -180], [90, 180]]], // worldwide
+        FiltersShipMMSI: [MMSI],
+        FilterMessageTypes: ["PositionReport"]
+      }));
+      statusEl.textContent = "Waiting for position update...";
+    };
+
+    ws.onmessage = (event) => {
+      const msg = JSON.parse(event.data);
+      const meta = msg.MetaData;
+      if (!meta) return;
+
+      const lat  = meta.latitude;
+      const lon  = meta.longitude;
+      const time = new Date(meta.time_utc).toUTCString();
+      const sog  = msg.Message?.PositionReport?.Sog?.toFixed(1) ?? "—";
+      const cog  = msg.Message?.PositionReport?.Cog?.toFixed(0) ?? "—";
+
+      if (marker) {
+        marker.setLatLng([lat, lon]);
+      } else {
+        marker = L.marker([lat, lon], { icon: boatIcon }).addTo(map);
+        map.setView([lat, lon], 10);
+      }
+
+      marker.bindPopup(
+        `<b>${VESSEL_NAME}</b><br>
+         ${lat.toFixed(4)}°N, ${lon.toFixed(4)}°E<br>
+         Speed: ${sog} kn &nbsp;|&nbsp; Course: ${cog}°<br>
+         <small>${time}</small>`
+      ).openPopup();
+
+      statusEl.textContent = `Last update: ${time}`;
+    };
+
+    ws.onerror = () => {
+      statusEl.textContent = "Connection error — retrying...";
+    };
+
+    ws.onclose = () => {
+      statusEl.textContent = "Disconnected — reconnecting in 30s...";
+      setTimeout(connect, 30000); // auto-reconnect
+    };
+  }
+
+  connect();
+</script>
+
+            </section>
+    
+    
 </body>
 
 </html>
+
 
